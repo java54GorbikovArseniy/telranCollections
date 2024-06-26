@@ -1,12 +1,12 @@
 package telran.util.test;
 
-import static org.junit.Assert.assertArrayEquals;
+
+import org.junit.jupiter.api.BeforeEach;
+import telran.util.HashSet;
 
 import java.util.Arrays;
 
-import org.junit.jupiter.api.BeforeEach;
-
-import telran.util.HashSet;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class HashSetTest extends SetTest {
 @Override
@@ -23,4 +23,5 @@ protected void runTest(Integer[] expected) {
 	Arrays.sort(expected);
 	assertArrayEquals(expected, actual);
 }
+
 }

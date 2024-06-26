@@ -1,11 +1,15 @@
 package telran.util.test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
+import telran.util.LinkedHashMap;
 
 class LinkedHashMapTest extends AbstractMapTest {
 
-	//TODO in setUp there will be created LinkedHashMap
+    @BeforeEach
+	@Override
+    void setUp(){
+        map = new LinkedHashMap<>();
+        super.setUp();
+    }
 
 }

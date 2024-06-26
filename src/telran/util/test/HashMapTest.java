@@ -1,11 +1,16 @@
 package telran.util.test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
+import telran.util.HashMap;
 
 class HashMapTest extends AbstractMapTest {
 
+    @BeforeEach
+    @Override
+    void setUp(){
+        map = new HashMap<>();
+        super.setUp();
+    }
 	//TODO in setUp there will be created HashMap
 
 }

@@ -1,13 +1,11 @@
 package telran.util.test;
 
-import static org.junit.Assert.assertArrayEquals;
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+import telran.util.SortedSet;
 
 import java.util.Arrays;
 
-import org.junit.jupiter.api.Test;
-
-import telran.util.SortedSet;
+import static org.junit.jupiter.api.Assertions.*;
 
 
 abstract class SortedSetTest extends SetTest {

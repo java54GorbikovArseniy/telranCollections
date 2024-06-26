@@ -1,7 +1,10 @@
 package telran.util.test;
 
-import static org.junit.Assert.*;
-import static org.junit.jupiter.api.Assertions.assertThrowsExactly;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Timeout;
+import telran.util.Collection;
+import telran.util.List;
 
 import java.util.Arrays;
 import java.util.Iterator;
@@ -9,13 +12,7 @@ import java.util.NoSuchElementException;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.Timeout;
-
-import telran.util.Collection;
-import telran.util.List;
+import static org.junit.jupiter.api.Assertions.*;
 
 public abstract class CollectionTest {
 	protected static final int N_ELEMENTS = 1_048_575;
@@ -134,8 +131,7 @@ public abstract class CollectionTest {
 		assertEquals(0, collection.size());
 	}
 	@Test
-	@Timeout(value = 5, unit = TimeUnit.SECONDS,
-	threadMode = Timeout.ThreadMode.SEPARATE_THREAD)
+	@Timeout(value = 5, unit = TimeUnit.SECONDS)
 	void performanceClearTest() {
 		createBigRandomCollection(new Random());
 		collection.clear();
